@@ -1,0 +1,19 @@
+﻿@page
+@model RegisterModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Areas/Identity/Pages/_LayoutPhanHeQTUser.cshtml";
+}
+
+<h1>Đăng ký tài khoản</h1>
+
+<form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+    Họ: <input asp-for="Input.FirstName" /> <br />
+    Tên: <input asp-for="Input.LastName" /><br />
+    Điện thoại: <input asp-for="Input.Phone" /><br />
+    Email: <input asp-for="Input.Email" /><br />
+    Mật khẩu: <input asp-for="Input.Password" /><br />
+    Xác nhận mật khẩu: <input asp-for="Input.ConfirmPassword" />
+    <button type="submit">Đăng ký</button>
+</form>

@@ -1,0 +1,17 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout = "~/Areas/Identity/Pages/_LayoutPhanHeQTUser.cshtml";
+}
+
+
+<h1>Đăng nhập hệ thống</h1>
+
+<form id="account" method="post">
+    Email: <input asp-for="Input.Email" />
+    Mật khẩu: <input asp-for="Input.Password" />
+    Ghi nhớ: <input asp-for="Input.RememberMe" />
+    <button type="submit">Đăng nhập</button>
+</form>
